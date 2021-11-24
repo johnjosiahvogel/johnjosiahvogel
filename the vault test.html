@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Vault</title>
+    <link rel="shortcut icon" type="image/jpg" href="file:///Users/johnvogel/Downloads/THE%20CUBICLE.png"/>
+</head>
+<style>
+   div {
+        display: table-cell;
+        width: 1000px;
+        height: 500px;
+        padding: 10px;
+        vertical-align: middle;
+      }
+      
+      input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #cfebb5;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+input[type="password"]
+{
+    font-size:50px;
+}
+      
+    </style>
+<body style="background-color:#cfebb5;">
+<center>
+<div>
+<form>
+
+    <input type="password" id="pswd" placeholder="..." class="no-outline">
+
+    
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "malaka";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location.replace("http://www.ostrichrug.com");
+        }
+        else{           
+        }
+    }
+    
+    var input = document.getElementById("pswd");
+
+var pswd = document.getElementById("pswd");
+
+/* Call 'checkPswd' when the 'Enter' key is released. */
+pswd.onkeyup = function (e) {
+   if (e.which == 13) checkPswd();
+};
+
+/* Prevent the form from submitting. */
+pswd.parentElement.onsubmit = function () {
+   return false;
+};
+
+</script>
+</div>
+</center>
+</body>
+</html>
